@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+<script>
+    //    var str = "我爱最帅的杨哥, 太帅了";
+    //    var index = str.indexOf("杨哥");
+    ////    console.log(index); //5
+    //    console.log(str.substr(5,2));
+
+    //    var obj = {
+    //        sex: "男"
+    //    }
+    // 我想知道obj这个对象中 有没有sex属性
+    //    console.log(obj["sexx"]);
+
+    // 只要if里面 不是undefined null false 0, 那么if后面的语句都是会执行的哦----判断对象中有没有这个属性
+    // 想知道对象里面有没有这个属性 ,可以直接放到if里面进行判断
+    //    if(obj["age"]){
+    //        console.log("有");
+    //    }else{
+    //        console.log("没有");
+    //    }
+
+    // 判断里面每个字母出现了多少次
+    var str3 = "whatOareYyouYnoYshaHleiHoHmyHgod";
+    // 首先将所有的字母 进行小写转换
+    str3 = str3.toLocaleLowerCase();
+    // 创建一个空的对象
+    var obj = {};
+    // 对字符串进行一个for循环,取出里面的每一个值,并且进行判断次数
+
+    for (var i = 0; i < str3.length; i++) {
+      if(obj[str3[i]]){// 如果这个字母在字符串中存在的话
+          obj[str3[i]] += 1;
+      }else{// 如果这个字母在字符串中不存在的话
+          obj[str3[i]] = 1;
+      }
+    }
+
+   // 遍历对象
+    for(var key in obj){
+        console.log("字母"+key +"在字符串中出现了"+obj[key]+"次数");
+    }
+
+
+</script>
+</body>
+</html>

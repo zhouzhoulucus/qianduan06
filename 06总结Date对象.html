@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+<script>
+    var dt = new Date();
+    dt.getFullYear();// 年
+    dt.getMonth();// 月
+    dt.getDate();//日
+    dt.getHours();// 小时
+    dt.getMinutes();// 分钟
+    dt.getSeconds();// 秒
+    dt.getDay();// 星期
+
+    dt.toDateString();// 获取老外显示的年月日
+    dt.toLocaleDateString();// 获取正常显示的年月日, 中间用 / 来分别
+    dt.toTimeString();// 获取正常显示的时分秒  中间的分隔符是 :
+    dt.toLocaleTimeString();// 获取带有上午下午显示的时分秒
+    dt.valueOf();// 获取毫秒
+
+    //    console.log(dt.toTimeString());
+
+    // 显示一条正常的日期加时间
+    console.log(dt.toLocaleDateString()+" "+dt.toTimeString());
+
+
+
+</script>
+</body>
+</html>

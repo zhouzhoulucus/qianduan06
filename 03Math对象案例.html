@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+<script>
+    // 例子:自己定义一个对象,实现系统的Max方法
+    // 自己定义一个对象,实现系统的Math.max方法
+    function MyMath(){
+        this.getMax=function(){
+            // 定义一个传入数字为最大值
+            var max = arguments[0];
+            // 进行循环遍历
+            for(var i=0;i<arguments.length;i++){
+                if(max < arguments[i]){
+                    max = arguments[i];
+                }
+            }
+            return max;
+        }
+    }
+
+    // 调用自定义的对象的方法 来计算最大值
+    var max = new MyMath().getMax(1,2,3,4,5,6,7,8,6,5,4,3,2);
+    console.log(max)
+
+</script>
+</body>
+</html>

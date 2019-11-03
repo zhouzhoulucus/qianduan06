@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    // 随机产生一个十六进制的颜色值
+    // 封装成一个函数
+    function getRanColor() {
+        var str = "#";
+        var arr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
+        for (var i = 0; i < 6; i++) {
+            // 产生的每个随机数都是一个索引, 根据索引找到数组中对应的值, 拼接到一起
+            var xiabiao = parseInt(Math.random() * (arr.length));
+            str += arr[xiabiao];
+        }
+        return str;
+    }
+
+    window.onload=function(){
+        document.getElementById("dv").style.backgroundColor = getRanColor();
+    }
+
+</script>
+
+<div id="dv"></div>
+</body>
+</html>

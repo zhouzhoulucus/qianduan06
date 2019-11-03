@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<script>
+    // js中没有字符类型
+
+    // 字符串是可以看成一个字符数组的
+
+
+    /**
+     * var str = "你好";  这个是存放在栈空间的
+     * var str = new String("你好"); 这个是 引用地址存放在栈空间  对象是存放在堆空间的
+     *
+     *
+     * subString 包头不包尾
+     *
+     * 字符串的不可变性
+     * 字符串的值 是不能改变的
+     */
+
+    // 重新赋值,得拿着对象方式来看待
+    //    var str = "哈哈";
+    //    str = "hehe"; //重新赋值
+    //    console.log(str);
+
+    // 这里就,显示出来 字符串中内容的不可变性
+    /**
+     * 字符串的值 之所以看起来改变了
+     * 那是因为指向改变了,并不是真的值改变了
+     * @type {string}
+     */
+    //    var str = "hello";
+    //    console.log(str[1]);
+    //    str[1] = "w";
+    //    console.log(str);
+
+    //    var str = "小苏好帅哦,真的好勇敢";
+    //    if(str.indexOf("帅") != -1){
+    //        str = str.replace("帅","猥琐");
+    //    }else{
+    //        console.log("不存在")
+    //    }
+    //
+    //    console.log(str);
+
+    //    var str ="哈哈,小苏真的是好帅哦";
+    //    str = str.substr(5,5);
+    //    console.log(str);
+    //
+    //    var str = "哈哈,小苏真的是好帅哦";
+    //    str = str.substring(5, 9);// 包头不包尾
+    //    console.log(str);
+
+    //    var str = "HELLO";
+    //    console.log(str.toLocaleLowerCase());
+
+    var str = "   哦,这是一个神器的     一天   ";
+    console.log("====="+str.trim()+"=====");
+
+</script>
+</body>
+</html>

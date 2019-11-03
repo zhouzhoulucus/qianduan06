@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+<script>
+    // 当前时间 ---- 当前服务器的时间
+    // 不传值, 得到的是当前时间
+    //    var dt = new Date();
+    //    console.log(dt);
+
+    // 传入字符串类型的时间,显示出来的是 从现在开始的时间
+    //    var dt = new Date("2019-12-12");
+    //    console.log(dt);
+
+    //    var dt = new Date("2019/12/12");
+    //    console.log(dt);
+
+    // 获取当前时间的对象
+    //    var dt = Date.now();
+    //    console.log(dt);
+
+    // 时间类型是无法直接进行计算来获取值的
+
+    var dt = new Date();
+
+    // 获取年
+    var year = dt.getFullYear();
+    console.log(year);
+
+    // 获取月
+    console.log(dt.getMonth()+1); // 是从0开始的,真是的月份是需要加1的
+
+    // 获取日期
+    //    console.log(dt.getDay());// 这里是获取星期的第几天, 获取日期应该用 getDate()
+    console.log(dt.getDate());
+    // 获取小时
+    console.log(dt.getHours());
+
+    //获取分钟
+    console.log(dt.getMinutes());
+
+    // 获取秒
+    console.log(dt.getSeconds());
+
+    // 获取星期
+    console.log(dt.getDay()); //星期是从0开始的
+
+    // 两个方法
+    console.log(dt.toDateString()); // 这个是老外显示
+    console.log(dt.toLocaleDateString());// 这个是显示中国年月日格式,中间用/ 来区分
+    console.log(dt.toTimeString());//这个是标准的 小时 分钟 和秒
+    console.log(dt.toLocaleTimeString());// 分上午和下午
+
+
+    // 正常时间输出是
+    console.log(dt.toLocaleDateString()+"----"+dt.toTimeString());
+
+    console.log(dt.valueOf());// 这个也是毫秒数显示
+
+
+</script>
+</body>
+</html>

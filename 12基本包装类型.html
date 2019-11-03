@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+<script>
+    // 普通变量不能直接调用属性和方法
+    // 对象可以直接调用属性和方法
+
+    // 一共就三种基本类型 number string boolean
+    // 基本包装类型: 本身是基本类型,但是在执行代码过程中,如果这种类型的变量 调用了属性或者是方法
+    // 那么这种类型就不在是基本类型了, 而是基本包装类型,这个变量也不是普通的变量了, 而是基本包装类型对象
+    // str 从基本类型转换成为了 基本包装类型
+    var str = "hello";// string --> String
+    var result = str.replace("ll", "LL");
+    //    console.log(result);
+
+    // num 从基本类型转换成为了基本包装类型
+    var num = 10;// number --> Number
+    //    console.log(num.toString());
+
+
+    var flag = new Boolean(false); // 因为这里创建了对象,因为是对象,所以就是存在的,
+    // 只要是对象&& true 结果就是true
+    // 如果是一个 对象&&true ,那么结果是true
+    // 如果是一个 true&&对象,那么结果是 后面的那个对象
+    var result = flag && true;
+    //    console.log(result);
+
+
+    var num=10; // 基本类型
+    var num2 = Number("10");// 这里也是基本类型,是将字符串10转换为 整数10, 没有new, 这里是类型转换
+    var num3 = new Number("10")// 这里使用了new, 所以num3 是对象,num3是基本包装类型
+//    console.log(num2)
+
+
+</script>
+</body>
+</html>
